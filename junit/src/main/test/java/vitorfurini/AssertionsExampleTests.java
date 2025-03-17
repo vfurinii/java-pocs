@@ -5,7 +5,7 @@ import org.vitorfurini.junit.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class JuniTestExamples {
+public class AssertionsExampleTests {
 
     Calculator calculator = new Calculator();
 
