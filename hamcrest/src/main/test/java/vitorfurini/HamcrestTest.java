@@ -1,4 +1,4 @@
-package org.vitorfurini.test;
+package vitorfurini;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.startsWith;
 
 import org.testng.annotations.Test;
-import org.vitorfurini.main.Person;
+import org.vitorfurini.hamcrest.Person;
 
 public class HamcrestTest {
 

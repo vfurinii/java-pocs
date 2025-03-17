@@ -1,4 +1,4 @@
-package org.vitorfurini.main;
+package org.vitorfurini.hamcrest;
 
 public class Person {
     private String name;
