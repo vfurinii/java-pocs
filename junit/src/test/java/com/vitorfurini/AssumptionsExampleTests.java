@@ -1,8 +1,8 @@
-package vitorfurini;
+package com.vitorfurini;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
-import org.vitorfurini.junit.Calculator;
+import org.vitorfurini.junit.calculator.Calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

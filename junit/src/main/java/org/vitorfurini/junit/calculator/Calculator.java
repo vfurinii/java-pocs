@@ -1,4 +1,4 @@
-package org.vitorfurini.junit;
+package org.vitorfurini.junit.calculator;
 
 public class Calculator {
 
