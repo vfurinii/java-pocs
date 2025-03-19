@@ -15,9 +15,10 @@ public class PersonConverterTest {
 
     @ParameterizedTest
     @CsvSource({
-            "Vitor;25, Vitor, 25",
-            "Gabriela;30, Gabriela, 30",
-            "Bernardo;40, Bernardo, 40"
+            "Vitor;29, Vitor, 29",
+            "Gabriela;28, Gabriela, 28",
+            "Bernardo;11, Bernardo, 11",
+            "Vicenzo;9, Vicenzo, 9"
     })
     void testPersonConversion(@ConvertWith(PersonConverter.class) Person person, String expectedName, int expectedAge) {
         assertEquals(expectedName, person.getName());
