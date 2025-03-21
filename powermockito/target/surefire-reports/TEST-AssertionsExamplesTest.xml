@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="AssertionsExamplesTest" time="0.55" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\vitor\IdeaProjects\powermockito\target\test-classes;C:\Users\vitor\IdeaProjects\powermockito\target\classes;C:\Users\vitor\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\vitor\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\vitor\.m2\repository\org\mockito\mockito-core\4.8.0\mockito-core-4.8.0.jar;C:\Users\vitor\.m2\repository\net\bytebuddy\byte-buddy\1.12.14\byte-buddy-1.12.14.jar;C:\Users\vitor\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.14\byte-buddy-agent-1.12.14.jar;C:\Users\vitor\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\vitor\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\vitor\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\vitor\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\vitor\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\vitor\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\vitor\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\vitor\AppData\Local\Temp\surefire5578580768978613317\surefirebooter-20250321102622266_3.jar C:\Users\vitor\AppData\Local\Temp\surefire5578580768978613317 2025-03-21T10-26-20_817-jvmRun1 surefire-20250321102622266_1tmp surefire_0-20250321102622266_2tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\vitor\IdeaProjects\powermockito\target\test-classes;C:\Users\vitor\IdeaProjects\powermockito\target\classes;C:\Users\vitor\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\vitor\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\vitor\.m2\repository\org\mockito\mockito-core\4.8.0\mockito-core-4.8.0.jar;C:\Users\vitor\.m2\repository\net\bytebuddy\byte-buddy\1.12.14\byte-buddy-1.12.14.jar;C:\Users\vitor\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.14\byte-buddy-agent-1.12.14.jar;C:\Users\vitor\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-api-mockito2\2.0.9\powermock-api-mockito2-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-api-support\2.0.9\powermock-api-support-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-reflect\2.0.9\powermock-reflect-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-core\2.0.9\powermock-core-2.0.9.jar;C:\Users\vitor\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-module-junit4\2.0.9\powermock-module-junit4-2.0.9.jar;C:\Users\vitor\.m2\repository\org\powermock\powermock-module-junit4-common\2.0.9\powermock-module-junit4-common-2.0.9.jar;C:\Users\vitor\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\vitor\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\vitor\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\vitor\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\vitor\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\vitor"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre"/>
+    <property name="basedir" value="C:\Users\vitor\IdeaProjects\powermockito"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\vitor\AppData\Local\Temp\surefire5578580768978613317\surefirebooter-20250321102622266_3.jar"/>
+    <property name="sun.boot.class.path" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\resources.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\rt.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\sunrsasign.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\jsse.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\jce.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\charsets.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\jfr.jar;C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_442-b06"/>
+    <property name="user.name" value="vitor"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\vitor\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\vitor\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.4.1"/>
+    <property name="java.version" value="1.8.0_442"/>
+    <property name="user.dir" value="C:\Users\vitor\IdeaProjects\powermockito"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\workspace_paipe\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Users\vitor\AppData\Local\Microsoft\WindowsApps;D:\IntelliJ IDEA 2023.2.5\bin;D:\workspace_paipe\apache-maven-3.8.8\bin;D:\workspace_paipe\Java\bin;C:\Users\vitor\AppData\Local\gitkraken\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.2\bin;;;C:\Users\vitor\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="25.442-b06"/>
+    <property name="java.specification.maintenance.version" value="6"/>
+    <property name="java.ext.dirs" value="C:\Users\vitor\.jdks\corretto-1.8.0_442-1\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testAssertions on testAssertions(AssertionsExamplesTest)" classname="AssertionsExamplesTest" time="0.094">
+    <failure message="Could not initialize class org.mockito.Mockito" type="java.lang.NoClassDefFoundError"><![CDATA[java.lang.NoClassDefFoundError: Could not initialize class org.mockito.Mockito
+	at org.powermock.api.mockito.internal.mockcreation.DefaultMockCreator.createMethodInvocationControl(DefaultMockCreator.java:108)
+	at org.powermock.api.mockito.internal.mockcreation.DefaultMockCreator.doCreateMock(DefaultMockCreator.java:61)
+	at org.powermock.api.mockito.internal.mockcreation.DefaultMockCreator.createMock(DefaultMockCreator.java:53)
+	at org.powermock.api.mockito.internal.mockcreation.DefaultMockCreator.mock(DefaultMockCreator.java:40)
+	at org.powermock.api.mockito.PowerMockito.mockStatic(PowerMockito.java:62)
+	at AssertionsExamplesTest.testAssertions(AssertionsExamplesTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:68)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:326)
+	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:89)
+	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:97)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.executeTest(PowerMockJUnit44RunnerDelegateImpl.java:310)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTestInSuper(PowerMockJUnit47RunnerDelegateImpl.java:131)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.access$100(PowerMockJUnit47RunnerDelegateImpl.java:59)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner$TestExecutorStatement.evaluate(PowerMockJUnit47RunnerDelegateImpl.java:147)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.evaluateStatement(PowerMockJUnit47RunnerDelegateImpl.java:107)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTest(PowerMockJUnit47RunnerDelegateImpl.java:82)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runBeforesThenTestThenAfters(PowerMockJUnit44RunnerDelegateImpl.java:298)
+	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:87)
+	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:50)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.invokeTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:218)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.runMethods(PowerMockJUnit44RunnerDelegateImpl.java:160)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$1.run(PowerMockJUnit44RunnerDelegateImpl.java:134)
+	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:34)
+	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:44)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.run(PowerMockJUnit44RunnerDelegateImpl.java:136)
+	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.run(JUnit4TestSuiteChunkerImpl.java:117)
+	at org.powermock.modules.junit4.common.internal.impl.AbstractCommonPowerMockRunner.run(AbstractCommonPowerMockRunner.java:57)
+	at org.powermock.modules.junit4.PowerMockRunner.run(PowerMockRunner.java:59)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:71)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:56)
+	at org.testng.TestRunner$1.run(TestRunner.java:681)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:887)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:710)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>
