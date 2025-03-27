@@ -1,20 +1,13 @@
 package vitorfurini;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.emptyString;
-import static org.hamcrest.Matchers.endsWith;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.lessThan;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.startsWith;
+import static org.hamcrest.Matchers.*;
 
 import org.testng.annotations.Test;
 import org.vitorfurini.hamcrest.Person;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HamcrestTest {
 
@@ -51,5 +44,29 @@ public class HamcrestTest {
         Person person = new Person("John", 30);
         assertThat(person.getName(), is("John")); // Verify object name
         assertThat(person.getAge(), greaterThan(20)); // Verify object age
+    }
+
+    @Test
+    public void testEqualTo() {
+        int actual = 5;
+        assertThat(actual, equalTo(5));
+    }
+
+    @Test
+    public void testHasItem() {
+        List<String> fruits = Arrays.asList("Apple", "Banana", "Orange");
+        assertThat(fruits, hasItem("Banana"));
+    }
+
+    @Test
+    public void testIsEmptyOrNullString() {
+        String emptyString = "";
+        assertThat(emptyString, isEmptyOrNullString());//is depracated emthod
+    }
+
+    @Test
+    public void testAllOf() {
+        String text = "Hello, Hamcrest!";
+        assertThat(text, allOf(startsWith("Hello"), containsString("Ham"), endsWith("!")));
     }
 }
