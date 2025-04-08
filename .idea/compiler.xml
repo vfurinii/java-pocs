@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="junit" />
+        <module name="chess-system" />
         <module name="hamcrest" />
         <module name="powermockito" />
-        <module name="junit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

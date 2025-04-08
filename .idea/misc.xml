@@ -8,10 +8,12 @@
         <option value="$PROJECT_DIR$/junit/pom.xml" />
         <option value="$PROJECT_DIR$/hamcrest/pom.xml" />
         <option value="$PROJECT_DIR$/../powermockito/pom.xml" />
+        <option value="$PROJECT_DIR$/powermockito/pom.xml" />
+        <option value="$PROJECT_DIR$/chess-system/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="openjdk-23 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

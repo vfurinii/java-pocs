@@ -1,0 +1,13 @@
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\app\Program.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\app\UI.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\boardgame\Board.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\boardgame\exception\BoardException.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\boardgame\Piece.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\boardgame\Position.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\ChessMatch.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\ChessPiece.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\ChessPosition.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\Color.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\exception\ChessException.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\pieces\King.java
+C:\Users\vitor\IdeaProjects\java-pocs\chess-system\src\main\java\org\vitorfurini\chess\pieces\Rook.java
