@@ -1,0 +1,13 @@
+org\vitorfurini\chess\pieces\King.class
+org\vitorfurini\chess\ChessMatch.class
+org\vitorfurini\chess\Color.class
+org\vitorfurini\app\Program.class
+org\vitorfurini\boardgame\Position.class
+org\vitorfurini\chess\pieces\Rook.class
+org\vitorfurini\app\UI.class
+org\vitorfurini\boardgame\Board.class
+org\vitorfurini\chess\ChessPiece.class
+org\vitorfurini\chess\exception\ChessException.class
+org\vitorfurini\boardgame\Piece.class
+org\vitorfurini\boardgame\exception\BoardException.class
+org\vitorfurini\chess\ChessPosition.class
