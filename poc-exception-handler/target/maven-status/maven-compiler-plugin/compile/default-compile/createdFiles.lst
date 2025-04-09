@@ -1,0 +1,7 @@
+org\vitorfurini\service\LibraryService.class
+org\vitorfurini\handler\BookNameHandler.class
+org\vitorfurini\api\LibraryController.class
+org\vitorfurini\exception\BookNameException.class
+org\vitorfurini\DemoExceptionHandlersApplication.class
+org\vitorfurini\model\LibraryModel.class
+org\vitorfurini\model\ErrorDTO.class
