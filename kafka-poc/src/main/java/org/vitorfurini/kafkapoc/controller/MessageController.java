@@ -1,12 +1,10 @@
 package org.vitorfurini.kafkapoc.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.vitorfurini.kafkapoc.model.EventUser;
 import org.vitorfurini.kafkapoc.producer.KafkaProducer;
+import org.vitorfurini.kafkapoc.util.JwtUtil;
 
 @RestController
 @RequestMapping("/api/v1/event")

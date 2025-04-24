@@ -9,8 +9,7 @@ public class KafkaPocApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KafkaPocApplication.class, args);
-		String token = JwtUtil.generateToken("vitor-furini");
-		System.out.println(token);
+
 	}
 
 }

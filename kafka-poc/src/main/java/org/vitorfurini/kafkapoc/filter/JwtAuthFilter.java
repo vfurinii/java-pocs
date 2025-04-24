@@ -1,50 +1,36 @@
 package org.vitorfurini.kafkapoc.filter;
 
-import io.jsonwebtoken.Jwts;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
+import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.filter.OncePerRequestFilter;
+import io.jsonwebtoken.*;
 
 import java.io.IOException;
 import java.util.Collections;
 
-public class JwtAuthFilter extends OncePerRequestFilter {
+public class JwtAuthFilter implements Filter  {
 
-    private static final String SECRET_KEY = "vitor-furini-13081995";
+    private static final String SECRET_KEY = "sua-chave-secreta";
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain)
-            throws ServletException, IOException {
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+            throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) req;
+        String authHeader = request.getHeader("Authorization");
 
-        String header = request.getHeader("Authorization");
-
-        if (header != null && header.startsWith("Bearer ")) {
-            String token = header.replace("Bearer ", "");
-
-            try {
-                String username = Jwts.parser()
-                        .setSigningKey(SECRET_KEY.getBytes())
-                        .parseClaimsJws(token)
-                        .getBody()
-                        .getSubject();
-
-                if (username != null) {
-                    UsernamePasswordAuthenticationToken auth =
-                            new UsernamePasswordAuthenticationToken(username, null, Collections.emptyList());
-                    SecurityContextHolder.getContext().setAuthentication(auth);
-                }
-            } catch (Exception e) {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                return;
-            }
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            ((HttpServletResponse) res).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Token ausente ou inválido");
+            return;
         }
 
-        filterChain.doFilter(request, response);
+        String token = authHeader.substring(7);
+        try {
+            Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token);
+        } catch (JwtException e) {
+            ((HttpServletResponse) res).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Token inválido");
+            return;
+        }
+
+        chain.doFilter(req, res);
     }
 }
