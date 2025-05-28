@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/chess-system/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chess-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grocery-list-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grocery-list-system/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hamcrest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hamcrest/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/junit/src/main/java" charset="UTF-8" />

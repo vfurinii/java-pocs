@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hamcrest/hamcrest.iml" filepath="$PROJECT_DIR$/hamcrest/hamcrest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-pocs.iml" filepath="$PROJECT_DIR$/.idea/java-pocs.iml" />
     </modules>
   </component>
 </project>
