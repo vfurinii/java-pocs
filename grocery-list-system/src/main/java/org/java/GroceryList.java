@@ -36,7 +36,7 @@ public class GroceryList {
             System.out.println("list is empty.");
             return;
         }
-        System.out.println("grocery list-> ");
+        //System.out.println("grocery list-> ");
         for (int i = 0; i < itemCount; i++) {
             System.out.println("- " + items[i]);
         }
