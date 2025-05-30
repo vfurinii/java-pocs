@@ -24,18 +24,18 @@ public class Main {
                 switch (opcao) {
                     case 1:
                         System.out.println("Adding item... ");
-                        //TODO logica para adicionar item
                         System.out.print("Enter item name: ");
                         String itemName = scanner.next();
                         groceryList.addItem(itemName);
                         break;
                     case 2:
                         System.out.println("Listing");
-                        //TODO logica para listar
                         groceryList.displayItems();
                         break;
                     case 3:
-                        System.out.println("cHOOSE item to revove: ");
+                        System.out.println("cHOOSE item to remove: ");
+                        String itemToRemove = scanner.next();
+                        groceryList.removeItem(itemToRemove);
                         break;
                     case 4:
                         System.out.println("exiting... ");
@@ -47,5 +47,4 @@ public class Main {
             } while (opcao != 4);
             scanner.close();
         }
-
     }
