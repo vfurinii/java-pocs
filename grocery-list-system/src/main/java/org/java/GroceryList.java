@@ -1,22 +1,30 @@
 package org.java;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class GroceryList {
 
     private String[] items;
-    private int itemCount;
-    private static final int MAX_ITEMS = 100;
-    public GroceryList() {
-        items = new String[MAX_ITEMS];
-        itemCount = 0;
+    private int itemCount = 0;
+    private String name;
+
+    public GroceryList(String name) {
+        this.name = name;
+    }
+
+    public GroceryList(String name, int maxItems) {
+        this.name = name;
+        this.items = new String[maxItems];
+        this.itemCount = 0;
     }
 
     public void addItem(String item) {
-        if (itemCount < MAX_ITEMS) {
+            items = new String[items == null ? 10 : items.length + 1];
             items[itemCount] = item;
             itemCount++;
-        } else {
-            System.out.println("grocery list is full");
-        }
     }
 
     public void removeItem(String item) {
