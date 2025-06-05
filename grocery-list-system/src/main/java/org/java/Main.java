@@ -18,7 +18,8 @@ public static void main(String[] args) {
         System.out.println("1 - Create new grocery list");
         System.out.println("2 - Use existing grocery list");
         System.out.println("3 - List all grocery lists");
-        System.out.println("4 - Exit system");
+        System.out.println("4 - remove a grocery list");
+        System.out.println("5 - exit system");
         System.out.print("Choose: ");
 
         opcao = scanner.nextInt();
@@ -57,12 +58,16 @@ public static void main(String[] args) {
                 groceryLists.forEach(groceryList -> System.out.println(groceryList.getName()));
                 break;
             case 4:
+                System.out.println("remove a grocery lists...");
+                removeGroceryList(groceryLists, scanner.nextInt());
+                break;
+            case 5:
                 System.out.println("exiting...");
                 break;
             default:
                 System.out.println("invalid option newbie!");
         }
-    } while (opcao != 4);
+    } while (opcao != 5);
     scanner.close();
 //
 }
@@ -104,5 +109,14 @@ private static void callUseGroceryList(GroceryList actualGroceryList, Scanner sc
 
         } while (opcao != 4);
     System.out.println("Returning to main menu...");
+    }
+
+    private static void removeGroceryList(List<GroceryList> groceryLists, int index) {
+        if (index < 0 || index >= groceryLists.size()) {
+            System.out.println("invalid index");
+            return;
+        }
+        groceryLists.remove(index);
+        System.out.println("grocery list removed");
     }
 }
