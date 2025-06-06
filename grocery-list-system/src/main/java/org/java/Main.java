@@ -18,8 +18,9 @@ public static void main(String[] args) {
         System.out.println("1 - Create new grocery list");
         System.out.println("2 - Use existing grocery list");
         System.out.println("3 - List all grocery lists");
-        System.out.println("4 - remove a grocery list");
-        System.out.println("5 - exit system");
+        System.out.println("4 - mark done");
+        System.out.println("5 - remove a grocery list");
+        System.out.println("6 - exit system");
         System.out.print("Choose: ");
 
         opcao = scanner.nextInt();
@@ -62,6 +63,10 @@ public static void main(String[] args) {
                 removeGroceryList(groceryLists, scanner.nextInt());
                 break;
             case 5:
+                System.out.println("mark done a grocery list...");
+                markDone(groceryLists, scanner.nextInt());
+                break;
+            case 6:
                 System.out.println("exiting...");
                 break;
             default:
@@ -72,7 +77,17 @@ public static void main(String[] args) {
 //
 }
 
-private static void callUseGroceryList(GroceryList actualGroceryList, Scanner scanner) {
+    private static void markDone(List<GroceryList> groceryLists, int i) {
+        if (i < 0 || i >= groceryLists.size()) {
+            System.out.println("invalid index");
+            return;
+        }
+        GroceryList groceryList = groceryLists.get(i);
+        System.out.println("grocery list " + groceryList.getName() + " marked as done.");
+        groceryLists.get(i).setName(groceryList.getName() + " - done");
+    }
+
+    private static void callUseGroceryList(GroceryList actualGroceryList, Scanner scanner) {
     int opcao;
     do {
         System.out.println("=== Grocery list ===");
