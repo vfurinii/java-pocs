@@ -20,7 +20,8 @@ public static void main(String[] args) {
         System.out.println("3 - List all grocery lists");
         System.out.println("4 - mark done");
         System.out.println("5 - remove a grocery list");
-        System.out.println("6 - exit system");
+        System.out.println("6 - edit name grocery list");
+        System.out.println("7 - exit system");
         System.out.print("Choose: ");
 
         opcao = scanner.nextInt();
@@ -67,15 +68,35 @@ public static void main(String[] args) {
                 markDone(groceryLists, scanner.nextInt());
                 break;
             case 6:
+                System.out.println("edit name from grocery list...");
+                rename(groceryLists);
+                break;
+            case 7:
                 System.out.println("exiting...");
                 break;
             default:
                 System.out.println("invalid option newbie!");
         }
-    } while (opcao != 5);
+    } while (opcao != 7);
     scanner.close();
 //
 }
+
+    private static void rename(List<GroceryList> groceryLists) {
+        for (int i = 0; i < groceryLists.size(); i++) {
+            System.out.println(i + " - " + groceryLists.get(i).getName());
+        }
+        System.out.println("choose a grocery list to rename (0 to " + (groceryLists.size() - 1) + "):");
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        scanner.nextLine();
+        GroceryList groceryList = groceryLists.get(i);
+        System.out.println("current name: " + groceryList.getName());
+        System.out.print("enter new name: ");
+        String newName = scanner.nextLine();
+        groceryList.setName(newName);
+        System.out.println("grocery list was renamed to: " + newName);
+    }
 
     private static void markDone(List<GroceryList> groceryLists, int i) {
         if (i < 0 || i >= groceryLists.size()) {
