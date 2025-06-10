@@ -12,6 +12,7 @@
         <module name="chess-system" />
         <module name="hamcrest" />
         <module name="powermockito" />
+        <module name="fileManager" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
