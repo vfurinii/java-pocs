@@ -20,6 +20,8 @@ public class Main {
                 writer.newLine();
                 writer.write("Bernardo,12,bernardo@email.com");
                 writer.newLine();
+                writer.newLine();
+                writer.write("Vicenzo,9,vicenzo@email.com");
                 System.out.println("CSV file created successfully: " + CSV_FILE);
             } catch (IOException e) {
                 e.printStackTrace();
