@@ -35,4 +35,19 @@ public class UserServiceTest {
         PowerMockito.verifyStatic(Utility.class, times(1));
         Utility.generateId();
     }
+
+    @Test
+    public void testProcess_withMockedStaticMethod() {
+        // Arrange
+        PowerMockito.mockStatic(Utility.class);
+        PowerMockito.when(Utility.getMessage()).thenReturn("Mocked Message");
+
+        UserService service = new UserService();
+
+        // Act
+        String result = service.process();
+
+        // Assert
+        assertEquals("Mocked Message", result);
+    }
 }
