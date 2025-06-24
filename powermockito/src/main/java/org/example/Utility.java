@@ -5,6 +5,10 @@ public class Utility {
         return "REAL_ID_" + System.currentTimeMillis();
     }
 
+    public static String getId() {
+        return "REAL_ID_" + System.currentTimeMillis();
+    }
+
     public static String getMessage() {
         return "test with static method";
     }
