@@ -37,6 +37,19 @@ public class UserServiceTest {
     }
 
     @Test
+    public void testDeleteUser() {
+        // given
+        PowerMockito.when(Utility.generateId()).thenReturn("MOCK_ID");
+
+        //under test
+        String result = userService.deleteUser();
+
+        assertEquals("USER_MOCK_ID", result);
+        PowerMockito.verifyStatic(Utility.class, times(1));
+        Utility.generateId();
+    }
+
+    @Test
     public void testProcess_withMockedStaticMethod() {
         // Arrange
         PowerMockito.mockStatic(Utility.class);

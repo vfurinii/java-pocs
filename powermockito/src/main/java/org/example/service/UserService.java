@@ -7,6 +7,10 @@ public class UserService {
         return "USER_" + Utility.generateId();
     }
 
+    public String deleteUser() {
+        return "USER_" + Utility.generateId();
+    }
+
     public String process() {
         return Utility.getMessage();
     }
