@@ -12,10 +12,11 @@
         <option value="$PROJECT_DIR$/chess-system/pom.xml" />
         <option value="$PROJECT_DIR$/grocery-list-system/pom.xml" />
         <option value="$PROJECT_DIR$/fileManager/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-config-poc/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="openjdk-23 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="openjdk-23 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
