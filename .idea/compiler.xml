@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="grocery-list-system" />
         <module name="junit" />
         <module name="chess-system" />
-        <module name="hamcrest" />
         <module name="powermockito" />
         <module name="fileManager" />
+        <module name="grocery-list-system" />
+        <module name="spring-cloud-config-poc" />
+        <module name="hamcrest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="junit" options="" />
+      <module name="spring-cloud-config-poc" options="-parameters" />
     </option>
   </component>
 </project>
