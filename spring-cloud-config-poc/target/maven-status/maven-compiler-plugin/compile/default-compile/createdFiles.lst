@@ -1,0 +1,3 @@
+org\example\controller\HelloController.class
+org\example\config\MyAppConfig.class
+org\example\ConfigPocApplication.class
