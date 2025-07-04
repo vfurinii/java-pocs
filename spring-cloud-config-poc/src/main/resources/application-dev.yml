@@ -1,0 +1,3 @@
+myapp:
+  greeting: "Hello"
+  name: "Spring Boot Development"
