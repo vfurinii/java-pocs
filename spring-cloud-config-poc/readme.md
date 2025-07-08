@@ -37,5 +37,5 @@ poc-spring-cloud-config/
    ```
 4. Execute o comando Maven para compilar e iniciar a aplicação:
    ```bash
-    mvn spring-boot:run
+    mvn spring-boot:run -Dspring-boot.run.profiles=dev,prod,stage
     ```
