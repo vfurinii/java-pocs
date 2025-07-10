@@ -14,6 +14,9 @@
         <module name="grocery-list-system" />
         <module name="spring-cloud-config-poc" />
         <module name="hamcrest" />
+        <module name="dungeon-game-java" />
+        <module name="powermockito (1) (org.example)" />
+        <module name="powermockito (2) (vitorfurini)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
