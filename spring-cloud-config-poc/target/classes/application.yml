@@ -1,3 +1,9 @@
 myapp:
   greeting: "Hello"
   name: "Spring Boot"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
