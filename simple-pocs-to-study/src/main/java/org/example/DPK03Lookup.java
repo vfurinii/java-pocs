@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.models.DPK03;
+
 import java.util.Map;
 
 public class DPK03Lookup {
