@@ -1,24 +1,37 @@
 package org.example;
 
-import java.util.Map;
+import java.util.Scanner;
 
 public class SimplePatternMatcherPOC {
-    public static void main(String[] args) {
-        Map<String, Countries> dataMap = Map.of(
-                "001", new Countries("USA", "english"),
-                "002", new Countries("Brazil", "Portuguese"),
-                "003", new Countries("Spain", "Spanish"),
-                "004", new Countries("Italy", "Italian"),
-                "005", new Countries("France", "French"),
-                "006", new Countries("Germany", "German")
-        );
 
-        String name = "Brazil";
-
-        for(Map.Entry<String, Countries> entry : dataMap.entrySet()) {
-            if (entry.getValue().getName().equalsIgnoreCase(name)) {
-                System.out.println("Found: " + entry.getValue().getLanguage());
-            }
+    public static String pattern_matcher(String country) {
+        switch (country.toUpperCase()) {
+            case "USA":
+                return "English";
+            case "BRAZIL":
+                return "Portuguese";
+            case "SPAIN":
+                return "Spanish";
+            case "ITALY":
+                return "Italian";
+            case "FRANCE":
+                return "French";
+            case "GERMANY":
+                return "German";
+            default:
+                return "Unknown Country";
         }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Choose a country you want know the language between Usa, Brazil, Spain, Italy, France, Germany: ");
+
+        String country = scanner.nextLine();
+
+        String language = pattern_matcher(country);
+        System.out.println(country.toUpperCase() + " > " + language);
     }
 }
