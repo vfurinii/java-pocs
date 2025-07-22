@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/spring-cloud-config-poc/pom.xml" />
         <option value="$PROJECT_DIR$/dungeon-game-java/pom.xml" />
         <option value="$PROJECT_DIR$/simple-pocs-to-study/pom.xml" />
+        <option value="$PROJECT_DIR$/poc-find-cep/pom.xml" />
       </list>
     </option>
   </component>
