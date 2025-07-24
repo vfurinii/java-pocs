@@ -1,7 +1,7 @@
 package org.java;
 
 import java.io.*;
-public class Main {
+public class CSVManager {
 
     private static final String CSV_FILE = "file.csv";
     public static void main(String[] args) {
