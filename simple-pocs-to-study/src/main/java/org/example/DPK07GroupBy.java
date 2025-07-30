@@ -21,6 +21,8 @@ public class DPK07GroupBy {
 
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        //TODO
+        String[] letters = {"a","b","c","d","e","f","g","h","i","j"};
         int groupSize = 3;
         int[][] result = groupBy(numbers, groupSize);
 
