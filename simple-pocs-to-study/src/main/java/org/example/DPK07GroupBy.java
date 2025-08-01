@@ -23,24 +23,21 @@ public class DPK07GroupBy {
 
     public static void main(String[] args) {
         String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        String[] numbers2 = {"11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
         String[] letters = {"a","b","c","d","e","f","g","h","i","j"};
         int groupSize = 3;
         String[][] resultNumbers = groupBy(numbers, groupSize);
         String[][] resultLetters = groupBy(letters, groupSize);
+        String[][] resultNumbers2 = groupBy(numbers2, groupSize);
+        extracted(resultNumbers);
+        System.out.printf("%n");
+        extracted(resultLetters);
+        System.out.printf("%n");
+        extracted(resultNumbers2);
+    }
 
+    private static void extracted(String[][] resultNumbers) {
         for (String[] group : resultNumbers) {
-            System.out.print("[");
-            for (String num : group) {
-                if(!Objects.equals(num, group[group.length - 1])) {
-                    System.out.print(num + ", ");
-                } else {
-                    System.out.print(num);
-                }
-            }
-            System.out.print("], ");
-        }
-
-        for (String[] group : resultLetters) {
             System.out.print("[");
             for (String num : group) {
                 if(!Objects.equals(num, group[group.length - 1])) {
