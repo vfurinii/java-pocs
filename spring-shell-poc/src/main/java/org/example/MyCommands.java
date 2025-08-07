@@ -7,7 +7,7 @@ import org.springframework.shell.standard.ShellOption;
 @ShellComponent
 public class MyCommands {
 
-    @ShellMethod(key = "hello")
+    @ShellMethod(key = "hello", value = "Say hello to someone")
     public String hello(@ShellOption(defaultValue = "name") String name) {
         return "Olá, " + name + "!";
     }
