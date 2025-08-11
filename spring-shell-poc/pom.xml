@@ -21,6 +21,11 @@
             <artifactId>spring-boot-starter</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>6.1.21</version>
+        </dependency>
         <!-- Spring Shell -->
         <dependency>
             <groupId>org.springframework.shell</groupId>
