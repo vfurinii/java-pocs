@@ -18,6 +18,7 @@
         <module name="dungeon-game-java" />
         <module name="powermockito (1) (org.example)" />
         <module name="powermockito (2) (vitorfurini)" />
+        <module name="spring-shell-poc" />
       </profile>
       <profile name="Annotation profile for poc-find-cep" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -38,6 +39,7 @@
       <module name="junit" options="" />
       <module name="poc-find-cep" options="-parameters" />
       <module name="spring-cloud-config-poc" options="-parameters" />
+      <module name="spring-shell-poc" options="-parameters" />
     </option>
   </component>
 </project>
