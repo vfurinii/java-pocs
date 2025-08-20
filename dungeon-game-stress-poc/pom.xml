@@ -61,6 +61,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Gatling dependencies -->
         <dependency>
             <groupId>io.gatling.highcharts</groupId>
