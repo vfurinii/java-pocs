@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.dto.DungeonGameDto;
+import org.example.model.DungeonGame;
 import org.example.service.DungeonGameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ public class DungeonGameController {
     private DungeonGameService dungeonGameService;
 
     @GetMapping("/dungeons")
-    public ResponseEntity<List<DungeonGameDto>> findAll() {
+    public ResponseEntity<List<DungeonGame>> findAll() {
         var responses = dungeonGameService.findAll();
         return ResponseEntity.ok(responses);
     }

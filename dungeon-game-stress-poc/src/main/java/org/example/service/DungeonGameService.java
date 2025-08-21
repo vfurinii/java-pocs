@@ -5,6 +5,9 @@ import org.example.repository.DungeonGameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.StreamSupport;
+
 @Service
 public class DungeonGameService {
 
@@ -15,7 +18,7 @@ public class DungeonGameService {
         this.dungeonGameRepository = dungeonGameRepository;
     }
 
-    public Iterable<DungeonGame> findAll() {
-        return dungeonGameRepository.findAll();
+    public List<DungeonGame> findAll() {
+        return StreamSupport.stream(dungeonGameRepository.findAll().spliterator(), false).toList();
     }
 }
