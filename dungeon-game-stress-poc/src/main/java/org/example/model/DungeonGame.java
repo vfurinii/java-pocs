@@ -1,6 +1,5 @@
 package org.example.model;
 
-import jakarta.persistence.Entity;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
