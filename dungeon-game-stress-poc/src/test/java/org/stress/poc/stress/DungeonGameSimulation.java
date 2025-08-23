@@ -1,4 +1,4 @@
-package java;
+package org.stress.poc.stress;
 
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
