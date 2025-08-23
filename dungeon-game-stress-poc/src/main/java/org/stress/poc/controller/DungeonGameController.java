@@ -18,14 +18,14 @@ public class DungeonGameController {
     private DungeonGameService dungeonGameService;
 
     @GetMapping("/dungeons")
-    public ResponseEntity<List<DungeonGameEntity>> findAll() {
+    public ResponseEntity<List<DungeonGameResponse>> findAll() {
         var responses = dungeonGameService.findAll();
         return ResponseEntity.ok(responses);
     }
 
     @PostMapping("/dungeons")
     public ResponseEntity<DungeonGameResponse> calculateMinimumHealth(@RequestBody DungeonGameRequest request) {
-        var response = dungeonGameService.calculateMinimumHealth(request);
+        var response = dungeonGameService.calculateAndSave(request.getDungeon());
         return ResponseEntity.ok(response);
     }
 

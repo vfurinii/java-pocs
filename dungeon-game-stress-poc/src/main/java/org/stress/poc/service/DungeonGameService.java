@@ -1,43 +1,44 @@
 package org.stress.poc.service;
 
 import org.stress.poc.game.DungeonGame;
-import org.stress.poc.model.DungeonGameEntity;
-import org.stress.poc.model.DungeonGameRequest;
 import org.stress.poc.model.DungeonGameResponse;
 import org.stress.poc.repository.DungeonGameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
 @Service
 public class DungeonGameService {
 
+    private final DungeonGameRepository dungeonGameRepository;
+    private final DungeonGame dungeonGame;
+
     @Autowired
-    private DungeonGameRepository dungeonGameRepository;
-
-
-
     public DungeonGameService(DungeonGameRepository dungeonGameRepository) {
         this.dungeonGameRepository = dungeonGameRepository;
+        this.dungeonGame = new DungeonGame();
     }
 
-    public List<DungeonGameEntity> findAll() {
+    public List<DungeonGameResponse> findAll() {
         return StreamSupport.stream(dungeonGameRepository.findAll().spliterator(), false).toList();
     }
 
-    public DungeonGameResponse calculateMinimumHealth(DungeonGameRequest request) {
-        DungeonGame game = new DungeonGame();
+    public DungeonGameResponse calculateAndSave(int[][] dungeon) {
+        int result = dungeonGame.calculateMinimumHealth(dungeon);
 
-        game.calculateMinimumHealth(request);
+        String dungeonData = Arrays.deepToString(dungeon);
 
-//        var response = dungeonGameRepository.save();
 
-        return new DungeonGameResponse(1L, 1);
-    }
+        DungeonGameResponse dungeonResult = new DungeonGameResponse(
+                dungeonData,
+                result,
+                dungeon.length,
+                dungeon[0].length
+        );
 
-    public void save() {
-        System.out.println("saved");
+        return dungeonGameRepository.save(dungeonResult);
     }
 }
