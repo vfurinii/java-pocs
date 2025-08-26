@@ -15,21 +15,45 @@ public class DungeonGameSimulation extends Simulation {
             .acceptHeader("application/json")
             .contentTypeHeader("application/json");
 
-    private final String testDungeon = """
+    private final String testSimpleDungeon = """
         {
             "dungeon": [
-                [-3, 5],
-                [1, -4]
+                [-2, 7],
+                [3, -2]
+            ]
+        }
+        """;
+
+    private final String testMediumDungeon = """
+        {
+            "dungeon": [
+                [-2, 7],
+                [3, -2]
             ]
         }
         """;
 
     private final ScenarioBuilder basicLoad = scenario("Basic Load Test")
             .exec(
-                    http("calculate-dungeon")
+                    http("calculate-simple-dungeon")
                             .post("/v1/dungeons")
-                            .body(StringBody(testDungeon))
+                            .body(StringBody(testSimpleDungeon))
                             .check(status().is(200))
+            ).pause(1, 3)
+            .exec(
+                    http("calculate-medium")
+                            .post("/api/dungeons")
+                            .body(StringBody(testMediumDungeon))
+                            .check(status().is(200))
+                            .check(jsonPath("$.message").is("Success"))
+                            .check(jsonPath("$.result").exists())
+            )
+            .pause(1, 2)
+            .exec(
+                    http("get-results")
+                            .get("/api/dungeon/results")
+                            .check(status().is(200))
+                            .check(jsonPath("$").exists())
             );
 
     {
