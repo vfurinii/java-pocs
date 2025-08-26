@@ -36,6 +36,7 @@ public class DungeonGameResponse {
     }
 
     public DungeonGameResponse(String dungeonData, Integer result, Integer rows, Integer columns) {
+        this();
         this.dungeonData = dungeonData;
         this.result = result;
         this.rows = rows;
