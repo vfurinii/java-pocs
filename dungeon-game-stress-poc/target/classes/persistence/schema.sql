@@ -1,7 +1,14 @@
-create table if not exists dungeon_game(
-    id uuid not null primary key default gen_random_uuid(),
-    minimal_health integer not null,
-	execution_id text not null
+-- PostgreSQL schema for Dungeon Game results
+CREATE TABLE IF NOT EXISTS dungeon_results (
+    id BIGSERIAL PRIMARY KEY,
+    dungeon_data TEXT NOT NULL,
+    result INTEGER NOT NULL,
+    rows INTEGER NOT NULL,
+    columns INTEGER NOT NULL,
+    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-create index if not exists idx_game_execution_id on dungeon_game(execution_id);
+-- Create indexes for better query performance
+CREATE INDEX IF NOT EXISTS idx_dungeon_results_result ON dungeon_results(result);
+CREATE INDEX IF NOT EXISTS idx_dungeon_results_dimensions ON dungeon_results(rows, columns);
+CREATE INDEX IF NOT EXISTS idx_dungeon_results_created_at ON dungeon_results(created_at DESC);
