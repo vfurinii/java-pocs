@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class SimplePatternMatcherPOC {
+public class DPK01_impl_4 {
 
     public static String pattern_matcher(String country) {
         switch (country.toUpperCase()) {

@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 @Data
-public class DPK05Pointers {
+public class DPK01_impl_5 {
 
     private static final Map<String, Integer> powerMap = new HashMap<>();
 
