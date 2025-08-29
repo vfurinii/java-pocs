@@ -3,7 +3,7 @@ package org.example;
 import java.util.Arrays;
 
 // Create a function that can tokenize a string based on a token.
-public class DPK06Tokenizer {
+public class DPK01_impl_6 {
 
     public static String[] tokenize(String input, String token) {
         if (input == null || token == null) {

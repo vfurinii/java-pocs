@@ -4,7 +4,7 @@ import org.example.models.DPK03;
 
 import java.util.Map;
 
-public class DPK03Lookup {
+public class DPK01_impl_3 {
 
     public static DPK03 lookupById(Map<String, DPK03> map, String id) {
         return map.get(id);
