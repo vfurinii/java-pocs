@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/file-manager/file-manager.iml" filepath="$PROJECT_DIR$/file-manager/file-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/hamcrest/hamcrest.iml" filepath="$PROJECT_DIR$/hamcrest/hamcrest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-pocs.iml" filepath="$PROJECT_DIR$/.idea/java-pocs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-shell-poc/spring-shell-poc.iml" filepath="$PROJECT_DIR$/spring-shell-poc/spring-shell-poc.iml" />
     </modules>
   </component>
 </project>
