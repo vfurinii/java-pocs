@@ -17,7 +17,7 @@ class CalculatorTest {
     }
 
     @Test
-    void add() {
+    void add_happy_path() {
         //given
         Mockito.when(calculator.add(2, 3)).thenReturn(5);
 
@@ -26,6 +26,18 @@ class CalculatorTest {
 
         //then
         assertEquals(5, result, "2 + 3 should equal 5");
+    }
+
+    @Test
+    void add_fail_path() {
+        //given
+        Mockito.when(calculator.add(2, 3)).thenReturn(5);
+
+        //when
+        int result = calculator.add(2, 3);
+
+        //then
+        assertNotEquals(10, result, "2 + 3 should equal 5");
     }
 
     @Test
