@@ -12,7 +12,7 @@ public class DPK_01_impl_15 {
         person.addFriend("Gabriela");
         person.addFriend("Vicenzo");
         person.showInfo();
-//        person.showAge();
+        person.showAge();
 //        person.giveName();
     }
 }
