@@ -8,19 +8,22 @@ import java.util.zip.ZipInputStream;
 public class CsvFileManager {
 
     public static void main(String[] args) throws IOException {
-        String fileName = "file-manager/resources/files/report.csv";
+        String fileName = "/Users/vfurini/Documents/output.csv";
 
         //write csv file
-        writeCsv(fileName);
+//        writeCsv(fileName);
 
         //read csv file
-        readCsv(fileName);
+//        readCsv(fileName);
+
+        //edit csv file
+        editCsv(fileName);
 
         //zip file
-        zipCsv(fileName);
+//        zipCsv(fileName);
 
         //unzip file
-        unzipCsv(fileName.replace(".csv", ".zip"));
+//        unzipCsv(fileName.replace(".csv", ".zip"));
 
         //delte csv file
         //deleteFile(fileName);
@@ -72,6 +75,31 @@ public class CsvFileManager {
 
         } catch (IOException e) {
             System.err.println("Error reading CSV: " + e.getMessage());
+        }
+    }
+
+    private static void editCsv(String fileName) {
+        String outputFile = "/Users/vfurini/Documents/output_1.csv";
+
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName));
+             BufferedWriter bw = Files.newBufferedWriter(Paths.get(outputFile))) {
+
+            String line;
+            String prevLine = null;
+            while ((line = br.readLine()) != null) {
+                int idx = line.indexOf("_");
+                if (idx != -1) {
+                    line = line.substring(0, idx);
+                }if (line.equals(prevLine)) {
+                    continue;
+                }
+                bw.write(line);
+                bw.newLine();
+                prevLine = line;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     
