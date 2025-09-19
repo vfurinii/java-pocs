@@ -1,3 +1,5 @@
+package org.example;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,16 +13,16 @@ public class CsvFileManager {
         String fileName = "/Users/vfurini/Documents/output.csv";
 
         //write csv file
-//        writeCsv(fileName);
+        //writeCsv(fileName);
 
         //read csv file
-//        readCsv(fileName);
+        //readCsv(fileName);
 
         //edit csv file
-        editCsv(fileName);
+        //editCsv(fileName);
 
         //zip file
-//        zipCsv(fileName);
+        //zipCsv(fileName);
 
         //unzip file
 //        unzipCsv(fileName.replace(".csv", ".zip"));
@@ -29,7 +31,7 @@ public class CsvFileManager {
         //deleteFile(fileName);
     }
 
-    private static void writeCsv(String fileName) throws IOException {
+    public static void writeCsv(String fileName) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             //file header
             writer.write("ID, Name, Email");
@@ -62,7 +64,7 @@ public class CsvFileManager {
         }
 
 
-    private static void readCsv(String fileName) {
+    public static void readCsv(String fileName) {
         System.out.println("\nReading CSV content:");
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -78,7 +80,7 @@ public class CsvFileManager {
         }
     }
 
-    private static void editCsv(String fileName) {
+    public static void editCsv(String fileName) {
         String outputFile = "/Users/vfurini/Documents/output_1.csv";
 
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName));
@@ -102,8 +104,8 @@ public class CsvFileManager {
             e.printStackTrace();
         }
     }
-    
-    private static void zipCsv(String fileName) {
+
+    public static void zipCsv(String fileName) {
         System.out.println("\nZipping CSV file: " + fileName);
         String zipFileName = fileName.replace(".csv", ".zip");
         try (FileInputStream fis = new FileInputStream(fileName);
@@ -125,7 +127,7 @@ public class CsvFileManager {
         }
     }
 
-    private static void unzipCsv(String replace) throws IOException {
+    public static void unzipCsv(String replace) throws IOException {
         File destDir = new File("file-manager/resources/unzipedFile");
 
         byte[] buffer = new byte[1024];
@@ -172,7 +174,7 @@ public class CsvFileManager {
         return destFile;
     }
 
-    private static void deleteFile(String fileName) {
+    public static void deleteFile(String fileName) {
         System.out.println("\nSearching CSV file: " + fileName);
         File fileToDelete = new File(fileName);
         if (fileToDelete.exists()) {
