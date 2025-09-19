@@ -4,13 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class CsvFileManagerTest {
 
@@ -62,4 +58,24 @@ public class CsvFileManagerTest {
             assertTrue(e.getMessage().contains("Error writing CSV"));
         }
     }
+
+    //zip file tests
+    @Test
+    public void zipCsvCreatesZipFileWithCorrectName() {
+        String csvFileName = "test_output.csv";
+        String zipFileName = "test_output.zip";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFileName))) {
+            writer.write("ID, Name, Email");
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to create test CSV file", e);
+        }
+
+        CsvFileManager.zipCsv(csvFileName);
+
+        File zipFile = new File(zipFileName);
+        assertTrue(zipFile.exists());
+        zipFile.delete();
+    }
+
 }
