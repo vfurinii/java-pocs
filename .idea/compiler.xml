@@ -9,16 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="simple-pocs-to-study" />
         <module name="junit" />
+        <module name="fileManager" />
+        <module name="apache-commons" />
+        <module name="spring-shell-poc" />
         <module name="chess-system" />
         <module name="powermockito" />
-        <module name="fileManager" />
         <module name="grocery-list-system" />
         <module name="spring-cloud-config-poc" />
         <module name="hamcrest" />
         <module name="dungeon-game-java" />
         <module name="powermockito (1) (org.example)" />
         <module name="powermockito (2) (vitorfurini)" />
-        <module name="spring-shell-poc" />
       </profile>
       <profile name="Annotation profile for poc-find-cep" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
