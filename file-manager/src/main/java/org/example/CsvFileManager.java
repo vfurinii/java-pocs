@@ -39,11 +39,7 @@ public class CsvFileManager {
 
             //content
             String[] names = {
-                    "Vitor", "Gabi", "Bernardo", "Laura", "Lucas", "Mariana", "Felipe", "Ana", "João", "Camila",
-                    "Pedro", "Bianca", "Matheus", "Isabela", "Rafael", "Sofia", "Gustavo", "Clara", "Leonardo", "Julia",
-                    "Diego", "Manuela", "Henrique", "Livia", "Eduardo", "Beatriz", "Bruno", "Lara", "André", "Fernanda",
-                    "Caio", "Carla", "Igor", "Paula", "Rodrigo", "Renata", "Thiago", "Patricia", "Alex", "Leticia",
-                    "Daniel", "Catarina", "Marcelo", "Tais", "Samuel", "Helena", "Vinicius", "Luana", "Fernando", "Yasmin"
+                    "John", "Doe", "Gremio"
             };
 
             //method to generate IDs and emails using name in array + @email
