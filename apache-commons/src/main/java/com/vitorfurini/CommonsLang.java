@@ -4,18 +4,18 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class CommonsLang {
 
-        String s = "   ";
+    public void commonsLangSimpleExample() throws IOException {
+        String someString = "";
 
         // w/o Apache Commons
-        if (s == null || s.trim().isEmpty()) {
+        if (someString == null || someString.trim().isEmpty()) {
             System.out.println("Invalid string");
         }
 
         // w/ Apache Commons
-        if (StringUtils.isBlank(s)) {
+        if (StringUtils.isBlank(someString)) {
             System.out.println("Invalid string");
         }
     }
