@@ -8,7 +8,6 @@ public class Person {
     private String name;
     private int age;
 
-
     //Equals and HashCode
     @Override
     public boolean equals(Object obj) {
