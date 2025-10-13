@@ -17,7 +17,7 @@ public class TransactionProcessor {
     public static void main(String[] args) throws IOException {
         File file = new File("src/main/resources/files/csv/transaction.csv");
 
-        //commons IO
+        //not using commons IO
         if (!file.exists() || file.length() == 0) {
             System.err.println("No transaction file found or file is empty!");
             return;
