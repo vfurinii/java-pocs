@@ -29,12 +29,12 @@ public class TransactionProcessorWOApacheCommons {
             String line;
             boolean isHeader = true;
             while ((line = reader.readLine()) != null) {
-                if (isHeader) { // skip first line
+                if (isHeader) {
                     isHeader = false;
                     continue;
                 }
 
-                //Manual CSV parsing (naive split, not RFC-compliant)
+                //Manual CSV parsing
                 String[] columns = line.split(",", -1);
                 if (columns.length < 3) continue;
 
