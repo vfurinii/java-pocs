@@ -69,4 +69,20 @@ public class HamcrestTest {
         String text = "Hello, Hamcrest!";
         assertThat(text, allOf(startsWith("Hello"), containsString("Ham"), endsWith("!")));
     }
+
+    @Test
+    void testListSizeWithHamcrest() {
+        List<String> names = List.of("Alice", "Bob", "Charlie");
+        assertThat(names, hasSize(3));
+        assertThat(names, hasItem("Bob"));
+    }
+
+    //remove the expected for demo
+    @Test(expectedExceptions = AssertionError.class)
+    void testListSizeWithHamcrestFail() {
+        List<String> names = List.of("Alice", "Bob", "Charlie");
+        assertThat(names, hasSize(2));
+        assertThat(names, hasItem("Bob"));
+    }
 }
+
