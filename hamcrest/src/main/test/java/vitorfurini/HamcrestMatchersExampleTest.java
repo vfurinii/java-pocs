@@ -22,7 +22,7 @@ public class HamcrestMatchersExampleTest {
         assertThat(name, containsString("Furini"));
         assertThat(name, startsWith("Vitor"));
         assertThat(name, endsWith("Furini"));
-        assertThat(name, anyOf(containsString("Vitor"), containsString("Garcia"))); // at least one matches
+        assertThat(name, anyOf(containsString("Vitor"), containsString("Garcia")));
     }
 
     @Test
