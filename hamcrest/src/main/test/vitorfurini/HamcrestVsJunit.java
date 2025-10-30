@@ -1,4 +1,4 @@
-package java.vitorfurini;
+package vitorfurini;
 
 import org.hamcrest.Matcher;
 import org.junit.jupiter.api.Test;
