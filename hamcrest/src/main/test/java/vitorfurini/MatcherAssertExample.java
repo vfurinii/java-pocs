@@ -1,4 +1,4 @@
-package vitorfurini;
+package java.vitorfurini;
 
 import org.junit.Test;
 
