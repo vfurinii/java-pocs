@@ -38,3 +38,7 @@ This project focuses on identifying performance bottlenecks and scalability limi
 Build the Docker image:
 
 docker build -t dungeon-stress-poc .
+
+to run k6 tests just run 
+
+-- k6 run k6/standart/script.js
