@@ -1,4 +1,4 @@
-package org.example;
+package org.example.DPK01;
 
 //Create a function that can revert a string.
 public class DPK01_impl_1 {
