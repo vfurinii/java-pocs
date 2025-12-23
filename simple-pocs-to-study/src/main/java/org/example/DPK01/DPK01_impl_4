@@ -1,5 +1,12 @@
-public class main {
-public static String revert(String input) {
+public class DPK01_impl_1 {
+
+    public static void main(String[] args) {
+
+        System.out.println(revertString("Hello World!"));
+
+    }
+
+public static String revertString(String input) {
         if (null != input){
             StringBuilder result = new StringBuilder();
             for (int i = input.length()-1; i >= 0 ; i--) {
