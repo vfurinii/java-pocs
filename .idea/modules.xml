@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/carshop.iml" filepath="$PROJECT_DIR$/carshop.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-manager/file-manager.iml" filepath="$PROJECT_DIR$/file-manager/file-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/hamcrest/hamcrest.iml" filepath="$PROJECT_DIR$/hamcrest/hamcrest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-pocs.iml" filepath="$PROJECT_DIR$/.idea/java-pocs.iml" />

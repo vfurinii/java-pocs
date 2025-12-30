@@ -1,4 +1,6 @@
-public class DPK01_impl_1 {
+package org.example.DPK01;
+
+public class DPK01_impl_4 {
 
     public static void main(String[] args) {
 
