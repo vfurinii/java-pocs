@@ -24,15 +24,15 @@
         <module name="powermockito (1) (org.example)" />
         <module name="powermockito (2) (vitorfurini)" />
       </profile>
-      <profile name="Annotation profile for poc-find-cep" enabled="true">
+      <profile name="Annotation profile for Archetype - carshop" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="poc-find-cep" />
         <module name="carshop" />
+        <module name="poc-find-cep" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
