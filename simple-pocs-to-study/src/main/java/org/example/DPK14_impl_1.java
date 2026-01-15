@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DPK01_impl_14 {
+public class DPK14_impl_1 {
 
     public static List<String> move(String[][] grid, int[] startPos, String[] moves) {
         int rows = grid.length;
