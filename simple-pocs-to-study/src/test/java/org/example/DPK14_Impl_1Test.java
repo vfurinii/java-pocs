@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class DPK01Impl14Test {
+public class DPK14_Impl_1Test {
 
     @Test
     public void testBasicMovement() {
@@ -20,7 +20,7 @@ public class DPK01Impl14Test {
         int[] startPos = {0, 0};
         String[] moves = {"up", "down", "left", "right"};
 
-        List<String> result = DPK01_impl_14.move(deepCopy(grid), startPos, moves);
+        List<String> result = DPK14_impl_1.move(deepCopy(grid), startPos, moves);
 
         List<String> expected = Arrays.asList("Ryu", "Ken", "M.Bison");
         assertEquals(expected, result);
@@ -36,7 +36,7 @@ public class DPK01Impl14Test {
         int[] startPos = {0, 0};
         String[] moves = {"right", "right", "right"};
 
-        List<String> result = DPK01_impl_14.move(deepCopy(grid), startPos, moves);
+        List<String> result = DPK14_impl_1.move(deepCopy(grid), startPos, moves);
 
         List<String> expected = new ArrayList<>();
         assertEquals(expected, result);
@@ -52,7 +52,7 @@ public class DPK01Impl14Test {
         int[] startPos = {0, 0};
         String[] moves = {"left"};
 
-        List<String> result = DPK01_impl_14.move(deepCopy(grid), startPos, moves);
+        List<String> result = DPK14_impl_1.move(deepCopy(grid), startPos, moves);
 
         List<String> expected = List.of("Vega");
         assertEquals(expected, result);
