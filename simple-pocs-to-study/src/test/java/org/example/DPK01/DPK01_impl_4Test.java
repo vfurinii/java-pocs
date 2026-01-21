@@ -8,16 +8,16 @@ public class DPK01_impl_4Test {
 
     @Test
     public void revert() {
-        assertEquals("olleh", DPK01_impl_4.revert("hello"));
-        assertEquals("", DPK01_impl_4.revert(""));
-        assertNull(DPK01_impl_4.revert(null));
-        assertEquals("A", DPK01_impl_4.revert("A"));
-        assertEquals("racecar", DPK01_impl_4.revert("racecar"));
+        assertEquals("olleh", DPK01_impl_4.revertString("hello"));
+        assertEquals("", DPK01_impl_4.revertString(""));
+        assertNull(DPK01_impl_4.revertString(null));
+        assertEquals("A", DPK01_impl_4.revertString("A"));
+        assertEquals("racecar", DPK01_impl_4.revertString("racecar"));
     }
 
     @Test
     public void revertStringWithSpaces() {
-        assertEquals("  ", DPK01_impl_4.revert("  "));
-        assertEquals(" !dlroW olleH", DPK01_impl_4.revert("Hello World! "));
+        assertEquals("  ", DPK01_impl_4.revertString("  "));
+        assertEquals(" !dlroW olleH", DPK01_impl_4.revertString("Hello World! "));
     }
 }
