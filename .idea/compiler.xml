@@ -11,6 +11,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="simple-pocs-to-study" />
+        <module name="poc-find-cep" />
+        <module name="carshop" />
         <module name="junit" />
         <module name="fileManager" />
         <module name="apache-commons" />
@@ -20,8 +22,8 @@
         <module name="powermockito" />
         <module name="grocery-list-system" />
         <module name="spring-cloud-config-poc" />
-        <module name="hamcrest" />
         <module name="dungeon-game-java" />
+        <module name="hamcrest" />
         <module name="powermockito (1) (org.example)" />
         <module name="powermockito (2) (vitorfurini)" />
       </profile>
@@ -52,11 +54,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="carshop" options="-parameters" />
+      <module name="carshop" options="" />
       <module name="junit" options="" />
-      <module name="poc-find-cep" options="-parameters" />
-      <module name="spring-cloud-config-poc" options="-parameters" />
-      <module name="spring-shell-poc" options="-parameters" />
+      <module name="poc-find-cep" options="" />
+      <module name="spring-cloud-config-poc" options="" />
+      <module name="spring-shell-poc" options="" />
     </option>
   </component>
 </project>
