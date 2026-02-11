@@ -54,11 +54,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="carshop" options="" />
+      <module name="carshop" options="-parameters" />
       <module name="junit" options="" />
-      <module name="poc-find-cep" options="" />
-      <module name="spring-cloud-config-poc" options="" />
-      <module name="spring-shell-poc" options="" />
+      <module name="poc-find-cep" options="-parameters" />
+      <module name="spring-cloud-config-poc" options="-parameters" />
+      <module name="spring-shell-poc" options="-parameters" />
     </option>
   </component>
 </project>
