@@ -1,8 +1,6 @@
-package org.example;
+package org.example.DPK02;
 
-import java.util.Scanner;
-
-public class DPK01_impl_4 {
+public class DPK02_impl_1 {
 
     public static String pattern_matcher(String country) {
         switch (country.toUpperCase()) {
@@ -21,17 +19,5 @@ public class DPK01_impl_4 {
             default:
                 return "Unknown Country";
         }
-    }
-
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Choose a country you want know the language between Usa, Brazil, Spain, Italy, France, Germany: ");
-
-        String country = scanner.nextLine();
-
-        String language = pattern_matcher(country);
-        System.out.println(country.toUpperCase() + " > " + language);
     }
 }
