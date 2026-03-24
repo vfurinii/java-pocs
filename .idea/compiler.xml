@@ -57,8 +57,8 @@
       <module name="carshop" options="-parameters" />
       <module name="junit" options="" />
       <module name="poc-find-cep" options="-parameters" />
-      <module name="spring-cloud-config-poc" options="-parameters" />
-      <module name="spring-shell-poc" options="-parameters" />
+      <module name="spring-cloud-config-poc" options="" />
+      <module name="spring-shell-poc" options="" />
     </option>
   </component>
 </project>
