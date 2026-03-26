@@ -14,7 +14,7 @@ static class SegmentTreeNode {
 }
 
 public static class SegmentTree {
-    private SegmentTreeNode root;
+    private final SegmentTreeNode root;
 
     public SegmentTree(int[] nums) {
         this.root = buildSegmentTree(nums, 0, nums.length - 1);
@@ -29,6 +29,7 @@ public static class SegmentTree {
             int mid = start + (end - start) / 2;
             node.left = buildSegmentTree(nums, start, mid);
             node.right = buildSegmentTree(nums, mid + 1, end);
+            assert node.right != null;
             node.sum = node.left.sum + node.right.sum;
         }
         return node;
@@ -69,7 +70,7 @@ public static class SegmentTree {
     }
 }
 
-void main(String[] args) {
+void main() {
     int[] nums = {1, 3, 5, 7, 9, 11};
     SegmentTree segmentTree = new SegmentTree(nums);
 
