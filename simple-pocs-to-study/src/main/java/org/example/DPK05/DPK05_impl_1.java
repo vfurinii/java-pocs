@@ -1,4 +1,4 @@
-package org.example;
+package org.example.DPK05;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 @Data
-public class DPK01_impl_5 {
+public class DPK05_impl_1 {
 
     private static final Map<String, Integer> powerMap = new HashMap<>();
 
