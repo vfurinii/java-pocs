@@ -1,0 +1,28 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: "59 2 * * *"   # 23:59 no Brasil (UTC-3 = 02:59 UTC)
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config user.name "Vitor Furini"
+          git config user.email "vitormfurini@gmail.com"
+
+      - name: Make daily change
+        run: |
+          echo "Última execução: $(date)" >> activity.log
+          git add activity.log
+          git commit -m "Daily commit $(date +'%Y-%m-%d')" || echo "Nada para commitar"
+
+      - name: Push
+        run: git push
