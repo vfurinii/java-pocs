@@ -33,7 +33,6 @@ gradlew.bat
 .vscode/
 *.code-workspace
 
-*.log
 *.tmp
 *.bak
 *.swp
