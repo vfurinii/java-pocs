@@ -4,10 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /*
-The game should start with 10 mosquitos, 1 exterminator.
-The game should have a internal matrix of 100x100.
+The game should start with 10 mosquitos, 1 exterminator. ok
+The game should have a internal matrix of 100x100.      ok
 Every 1s the mosquito should move to a random position.
-Every 1s the exterminator should move to a spesific position.
+Every 1s the exterminator should move to a specific position.
 If the mosquito and the exterminator are in the same position, the mosquito should die.
 If the mosquito moves 5 times without being killed, it should reproduce if there is a mosquito nearby.
 The game should have a method that can return the number of mosquitos killed.
@@ -31,6 +31,24 @@ public class Game {
     public Game(Mosquito mosquito, Exterminator exterminator) {
         this.mosquito = new Mosquito[]{mosquito};
         this.exterminator = exterminator;
+        initializeMosquitoPositions();
     }
 
+    private void initializeMosquitoPositions() {
+        //
+        for (int i = 0; i < mosquito.length; i++) {
+            int x = (int) (Math.random() * 100);
+            int y = (int) (Math.random() * 100);
+            matrix[x][y] = i + 1;
+        }
+    }
+
+    
+    public int[][] getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(int[][] matrix) {
+        this.matrix = matrix;
+    }
 }
