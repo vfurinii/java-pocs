@@ -1,7 +1,7 @@
 package com.vitorfurini;
 
 import org.junit.jupiter.api.Test;
-import org.vitorfurini.junit.calculator.Calculator;
+import org.order.api.junit.calculator.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

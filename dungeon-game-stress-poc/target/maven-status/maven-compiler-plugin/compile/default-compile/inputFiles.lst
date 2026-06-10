@@ -1,4 +1,4 @@
-/home/vitor/IdeaProjects/java-pocs/dungeon-game-stress-poc/src/main/java/org/stress/poc/Main.java
+/home/vitor/IdeaProjects/java-pocs/dungeon-game-stress-poc/src/main/java/org/stress/poc/org.order.api.Main.java
 /home/vitor/IdeaProjects/java-pocs/dungeon-game-stress-poc/src/main/java/org/stress/poc/controller/DungeonGameController.java
 /home/vitor/IdeaProjects/java-pocs/dungeon-game-stress-poc/src/main/java/org/stress/poc/dto/DungeonGameDto.java
 /home/vitor/IdeaProjects/java-pocs/dungeon-game-stress-poc/src/main/java/org/stress/poc/game/DungeonGame.java

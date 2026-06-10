@@ -1,7 +1,7 @@
 package com.vitorfurini.converter;
 
 import org.junit.jupiter.params.converter.SimpleArgumentConverter;
-import org.vitorfurini.junit.calculator.Person;
+import org.order.api.junit.calculator.Person;
 
 public class PersonConverter extends SimpleArgumentConverter {
     @Override
