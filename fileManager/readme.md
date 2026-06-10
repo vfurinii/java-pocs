@@ -54,5 +54,5 @@ cd java-pocs/file-manager
 ### Compilar e Executar
 ```bash 
 mvn clean install
-mvn exec:java -Dexec.mainClass="com.vfurinii.filemanager.Main"
+mvn exec:java -Dexec.mainClass="com.vfurinii.filemanager.org.order.api.Main"
 

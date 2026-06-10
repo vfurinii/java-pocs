@@ -4,7 +4,7 @@ import com.vitorfurini.converter.PersonConverter;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.vitorfurini.junit.calculator.Person;
+import org.order.api.junit.calculator.Person;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

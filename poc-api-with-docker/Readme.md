@@ -15,7 +15,7 @@ This project is a simple **Proof of Concept (POC)** that shows how to run a **Sp
 
 ## 📂 Project Structure
 ├── src/main/java/com/example/demo
-│ ├── DemoApplication.java # Main Spring Boot application
+│ ├── DemoApplication.java # org.order.api.Main Spring Boot application
 │ ├── User.java # Entity example
 │ ├── UserRepository.java # Spring Data JPA repository
 │ └── UserController.java # REST controller
