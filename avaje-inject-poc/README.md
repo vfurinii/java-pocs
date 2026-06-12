@@ -1,0 +1,46 @@
+# avaje-inject-poc
+
+Projeto de estudo para demonstrar o uso do [Avaje Inject](https://avaje.io/inject/) em uma pequena arquitetura com produtor e consumidor.
+
+## O que este projeto mostra
+
+- Injeção de dependências com `@Singleton` e `@Factory`
+- Geração automática de wiring pelo Avaje Inject
+- Publicação de evento JSON em Kafka
+- Consumo do evento em outro processo
+
+## Fluxo da demo
+
+1. `org.order.api.Main` cria um pedido e publica um evento no tópico `orders.created`
+2. `notification.service.Main` consome o evento do mesmo tópico e imprime o conteúdo no console
+
+## Requisitos
+
+- Java 25
+- Maven 3.9+
+- Kafka disponível em `localhost:9092`
+
+## Validar o projeto
+
+```bash
+mvn test
+```
+
+## Como executar na apresentação
+
+1. Suba o Kafka apontando para `localhost:9092`
+2. Execute `notification.service.Main` para deixar o consumer esperando mensagens
+3. Execute `org.order.api.Main` para publicar um evento
+4. Observe o evento chegando no console do consumer
+
+## Estrutura principal
+
+- `src/main/java/org/order/api/Main.java`
+- `src/main/java/org/order/api/service/OrderService.java`
+- `src/main/java/org/order/api/kafka/OrderProducer.java`
+- `src/main/java/notification/service/Main.java`
+- `src/main/java/notification/service/kafka/OrderConsumer.java`
+
+## Observação
+
+O projeto foi pensado para estudo e apresentação. A configuração é intencionalmente simples para facilitar a explicação do fluxo do Avaje Inject.
