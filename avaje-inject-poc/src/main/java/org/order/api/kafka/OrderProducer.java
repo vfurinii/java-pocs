@@ -1,10 +1,10 @@
 package org.order.api.kafka;
 
-import com.fasterxml.jackson.databind.ser.std.StringSerializer;
 import jakarta.inject.Singleton;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
