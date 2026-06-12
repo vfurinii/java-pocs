@@ -28,9 +28,24 @@ mvn test
 
 ## Como executar
 
-1. Suba o Kafka apontando para `localhost:9092`
-2. Execute `notification.service.Main` para deixar o consumer esperando mensagens
-3. Execute `org.order.api.Main` para publicar um evento
+1. Suba o broker com:
+
+```bash
+docker compose up -d
+```
+
+2. Execute o consumer:
+
+```bash
+mvn -q -Dexec.mainClass=notification.service.Main exec:java
+```
+
+3. Em outro terminal, execute o producer:
+
+```bash
+mvn -q -Dexec.mainClass=org.order.api.Main exec:java
+```
+
 4. Observe o evento chegando no console do consumer
 
 ## Estrutura principal
@@ -40,3 +55,4 @@ mvn test
 - `src/main/java/org/order/api/kafka/OrderProducer.java`
 - `src/main/java/notification/service/Main.java`
 - `src/main/java/notification/service/kafka/OrderConsumer.java`
+- `docker-compose.yml`
