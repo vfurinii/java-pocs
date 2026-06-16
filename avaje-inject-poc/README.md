@@ -26,7 +26,7 @@ Projeto de estudo para demonstrar o uso do [Avaje Inject](https://avaje.io/injec
 mvn test
 ```
 
-## Como executar na apresentação
+## Como executar
 
 1. Suba o Kafka apontando para `localhost:9092`
 2. Execute `notification.service.Main` para deixar o consumer esperando mensagens
@@ -40,7 +40,3 @@ mvn test
 - `src/main/java/org/order/api/kafka/OrderProducer.java`
 - `src/main/java/notification/service/Main.java`
 - `src/main/java/notification/service/kafka/OrderConsumer.java`
-
-## Observação
-
-O projeto foi pensado para estudo e apresentação. A configuração é intencionalmente simples para facilitar a explicação do fluxo do Avaje Inject.
