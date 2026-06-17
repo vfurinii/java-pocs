@@ -9,7 +9,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import java.util.Properties;
 
 @Singleton
-public class OrderProducer {
+public class OrderProducer implements AutoCloseable {
 
     private final KafkaProducer<String, String> producer;
 
@@ -43,6 +43,15 @@ public class OrderProducer {
                         json
                 );
 
-        producer.send(record);
+        try {
+            producer.send(record).get();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to publish order event", e);
+        }
+    }
+
+    @Override
+    public void close() {
+        producer.close();
     }
 }
