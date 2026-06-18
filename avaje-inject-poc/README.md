@@ -1,54 +1,54 @@
 # avaje-inject-poc
 
-Projeto de estudo para demonstrar o uso do [Avaje Inject](https://avaje.io/inject/) em uma pequena arquitetura com produtor e consumidor.
+Study project to demonstrate [Avaje Inject](https://avaje.io/inject/) in a small producer/consumer architecture.
 
-## O que este projeto mostra
+## What this project shows
 
-- Injeção de dependências com `@Singleton` e `@Factory`
-- Geração automática de wiring pelo Avaje Inject
-- Publicação de evento JSON em Kafka
-- Consumo do evento em outro processo
+- Dependency injection with `@Singleton` and `@Factory`
+- Automatic wiring generation by Avaje Inject
+- Publishing a JSON event to Kafka
+- Consuming the event in a separate process
 
-## Fluxo da demo
+## Demo flow
 
-1. `org.order.api.Main` cria um pedido e publica um evento no tópico `orders.created`
-2. `notification.service.Main` consome o evento do mesmo tópico e imprime o conteúdo no console
+1. `org.order.api.Main` creates an order and publishes an event to the `orders.created` topic
+2. `notification.service.Main` consumes the event from the same topic and prints the payload to the console
 
-## Requisitos
+## Requirements
 
 - Java 25
 - Maven 3.9+
-- Kafka disponível em `localhost:9092`
+- Kafka available at `localhost:9092`
 
-## Validar o projeto
+## Validate the project
 
 ```bash
 mvn test
 ```
 
-## Como executar
+## How to run
 
-1. Suba o broker com:
+1. Start the broker with:
 
 ```bash
 docker compose up -d
 ```
 
-2. Execute o consumer:
+2. Run the consumer:
 
 ```bash
 mvn -q -Dexec.mainClass=notification.service.Main exec:java
 ```
 
-3. Em outro terminal, execute o producer:
+3. In another terminal, run the producer:
 
 ```bash
 mvn -q -Dexec.mainClass=org.order.api.Main exec:java
 ```
 
-4. Observe o evento chegando no console do consumer
+4. Observe the event arriving in the consumer console
 
-## Estrutura principal
+## Main structure
 
 - `src/main/java/org/order/api/Main.java`
 - `src/main/java/org/order/api/service/OrderService.java`
