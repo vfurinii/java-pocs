@@ -35,7 +35,7 @@ public class OrderService {
         producer.publish(json);
 
         System.out.println(
-                "Evento publicado"
+                "Event published"
         );
     }
 }

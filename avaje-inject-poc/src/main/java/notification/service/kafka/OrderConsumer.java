@@ -33,7 +33,7 @@ public class OrderConsumer implements AutoCloseable {
     }
 
     public void listen() {
-        System.out.println("Aguardando eventos em orders.created...");
+        System.out.println("Waiting for events on orders.created...");
 
         while (!Thread.currentThread().isInterrupted()) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(1));
@@ -42,13 +42,13 @@ public class OrderConsumer implements AutoCloseable {
                 try {
                     OrderCreatedEvent event = mapper.readValue(record.value(), OrderCreatedEvent.class);
                     System.out.printf(
-                            "Pedido recebido: id=%d cliente=%s valor=%.2f%n",
+                            "Order received: id=%d customer=%s amount=%.2f%n",
                             event.orderId(),
                             event.customer(),
                             event.amount()
                     );
                 } catch (Exception e) {
-                    System.out.println("Falha ao ler evento: " + e.getMessage());
+                    System.out.println("Failed to read event: " + e.getMessage());
                 }
             });
         }
