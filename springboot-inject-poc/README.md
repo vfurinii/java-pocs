@@ -1,13 +1,14 @@
-# avaje-inject-poc
+# springboot-inject-poc
 
-Study project to demonstrate [Avaje Inject](https://avaje.io/inject/) in a small producer/consumer architecture.
+Spring Boot version of the Avaje Inject proof of concept.
 
 ## What this project shows
 
-- Dependency injection with `@Singleton` and `@Factory`
-- Automatic wiring generation by Avaje Inject
+- Dependency injection with Spring Boot
+- Producer and consumer separation
 - Publishing a JSON event to Kafka
 - Consuming the event in a separate process
+- Startup timing printed by both applications
 
 ## Demo flow
 
@@ -28,7 +29,7 @@ mvn test
 
 ## How to run
 
-1. Start the broker with:
+1. Start the broker:
 
 ```bash
 docker compose up -d
@@ -48,6 +49,16 @@ mvn -q -Dexec.mainClass=org.order.api.Main exec:java
 
 4. Observe the event arriving in the consumer console
 
+## Timing
+
+- Each application prints its own startup time in milliseconds
+- The producer also prints the total time until the event is published
+- To measure build time, use:
+
+```bash
+/usr/bin/time -p mvn -DskipTests package
+```
+
 ## Main structure
 
 - `src/main/java/org/order/api/Main.java`
@@ -56,13 +67,3 @@ mvn -q -Dexec.mainClass=org.order.api.Main exec:java
 - `src/main/java/notification/service/Main.java`
 - `src/main/java/notification/service/kafka/OrderConsumer.java`
 - `docker-compose.yml`
-
-## Timing
-
-- Each application prints its startup time in milliseconds
-- The producer also prints the total time until the event is published
-- To measure build time, use:
-
-```bash
-/usr/bin/time -p mvn -DskipTests package
-```

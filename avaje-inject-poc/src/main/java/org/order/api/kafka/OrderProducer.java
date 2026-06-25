@@ -1,15 +1,21 @@
 package org.order.api.kafka;
 
 import jakarta.inject.Singleton;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+import java.util.Collections;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 @Singleton
 public class OrderProducer implements AutoCloseable {
+
+    private static final String TOPIC_NAME = "orders.created";
 
     private final KafkaProducer<String, String> producer;
 
@@ -32,6 +38,7 @@ public class OrderProducer implements AutoCloseable {
                 StringSerializer.class.getName()
         );
 
+        ensureTopicExists(props);
         producer = new KafkaProducer<>(props);
     }
 
@@ -39,7 +46,7 @@ public class OrderProducer implements AutoCloseable {
 
         ProducerRecord<String,String> record =
                 new ProducerRecord<>(
-                        "orders.created",
+                        TOPIC_NAME,
                         json
                 );
 
@@ -53,5 +60,20 @@ public class OrderProducer implements AutoCloseable {
     @Override
     public void close() {
         producer.close();
+    }
+
+    private static void ensureTopicExists(Properties props) {
+        try (AdminClient adminClient = AdminClient.create(props)) {
+            NewTopic topic = new NewTopic(TOPIC_NAME, 1, (short) 1);
+            adminClient.createTopics(Collections.singleton(topic))
+                    .all()
+                    .get(30, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            // If the topic already exists, we can continue normally.
+            if (e.getCause() instanceof org.apache.kafka.common.errors.TopicExistsException) {
+                return;
+            }
+            throw new RuntimeException("Failed to ensure topic exists: " + TOPIC_NAME, e);
+        }
     }
 }

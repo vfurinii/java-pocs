@@ -1,135 +1,71 @@
-# ☕ Java POCs
+# java-pocs
 
-Uma coleção de **Proofs of Concept (POCs)** desenvolvidas em Java para estudar, validar e demonstrar diferentes tecnologias, frameworks, padrões arquiteturais e boas práticas utilizadas no desenvolvimento moderno de software.
+Workspace for small Java proof-of-concept projects.
 
-O objetivo deste repositório é servir como um laboratório de experimentação, permitindo testar novas tecnologias de forma isolada antes de utilizá-las em projetos reais.
+## Avaje Inject vs Spring Boot
 
-## 🚀 Tecnologias
+This workspace contains two equivalent Kafka-based applications:
 
-Dependendo da POC, podem ser utilizados:
+- [avaje-inject-poc](/Users/vitorfurini/IdeaProjects/java-pocs/avaje-inject-poc)
+- [springboot-inject-poc](/Users/vitorfurini/IdeaProjects/java-pocs/springboot-inject-poc)
 
-- Java 17+
-- Spring Boot
-- Spring Security
-- Spring Data JPA
-- Hibernate
-- Maven
-- Docker
-- Testcontainers
-- JUnit 5
-- Mockito
-- Kafka
-- Redis
-- PostgreSQL
-- MySQL
-- AWS
-- Kubernetes
-- OpenAPI / Swagger
-- REST APIs
-- Design Patterns
-- Arquitetura Hexagonal
-- Clean Architecture
-- Microsserviços
+They implement the same flow:
 
-## 📂 Estrutura
+1. A producer publishes an `OrderCreatedEvent` to `orders.created`
+2. A consumer reads the event and prints it to the console
 
-Cada diretório representa uma POC independente, contendo seu próprio código-fonte, dependências e documentação quando necessário.
+## Presentation goal
 
-Exemplo:
+This workspace is designed to help explain the practical difference between Avaje Inject and Spring Boot in a small, realistic Kafka example.
 
-```text
-java-pocs/
-│
-├── spring-security-jwt/
-├── kafka-producer-consumer/
-├── redis-cache/
-├── hexagonal-architecture/
-├── docker-compose-example/
-└── ...
-```
+The comparison focuses on:
 
-## 🎯 Objetivos
+- Build time
+- Startup time
+- Time to become ready
+- Time to publish and consume one event
 
-Este repositório tem como finalidade:
+## Current takeaway
 
-- estudar novas tecnologias;
-- validar arquiteturas;
-- testar integrações;
-- criar exemplos reutilizáveis;
-- documentar soluções para problemas comuns;
-- servir como material de referência para futuras implementações.
+In the latest local run, Avaje Inject started faster than Spring Boot in this sample.
 
-## ▶️ Executando uma POC
+- Avaje consumer ready: `192.33 ms`
+- Spring Boot consumer ready: `721.16 ms`
+- Avaje producer completed: `288.12 ms`
+- Spring Boot producer completed: `846.95 ms`
 
-Cada projeto pode possuir requisitos específicos, mas normalmente basta:
+The full table is documented in [STARTUP_COMPARISON.md](/Users/vitorfurini/IdeaProjects/java-pocs/STARTUP_COMPARISON.md).
+
+## Benchmarking
+
+Use the comparison script from the workspace root:
 
 ```bash
-git clone https://github.com/vfurinii/java-pocs.git
-
-cd java-pocs/<nome-da-poc>
-
-./mvnw spring-boot:run
+./compare-startup.sh
 ```
 
-ou
+The script measures:
 
-```bash
-mvn clean install
-```
+- Build time
+- Consumer startup time
+- Producer startup time
+- Producer completion time
 
-Caso a POC utilize Docker:
+Recommended presentation flow:
 
-```bash
-docker compose up -d
-```
+1. Show the Avaje project first and explain the generated wiring
+2. Run the benchmark script to capture timings
+3. Show the Spring Boot version with the same business flow
+4. Compare the table and discuss the tradeoffs
 
-## 🧪 Testes
+## What to open during the demo
 
-Sempre que disponíveis:
+- [Benchmark summary](/Users/vitorfurini/IdeaProjects/java-pocs/STARTUP_COMPARISON.md)
+- [Avaje README](/Users/vitorfurini/IdeaProjects/java-pocs/avaje-inject-poc/README.md)
+- [Spring Boot README](/Users/vitorfurini/IdeaProjects/java-pocs/springboot-inject-poc/README.md)
 
-```bash
-mvn test
-```
+## Notes
 
-## 📚 Conteúdos explorados
-
-Entre os assuntos abordados neste repositório estão:
-
-- APIs REST
-- Autenticação JWT
-- OAuth2
-- Spring Security
-- Mensageria com Kafka
-- Cache com Redis
-- Persistência com JPA/Hibernate
-- Banco de dados relacionais
-- Testes unitários
-- Testes de integração
-- Testcontainers
-- Docker
-- Kubernetes
-- AWS
-- CI/CD
-- Arquitetura Hexagonal
-- Clean Architecture
-- Design Patterns
-- Resiliência
-- Observabilidade
-- Boas práticas de desenvolvimento Java
-
-## 🤝 Contribuições
-
-Este repositório é voltado principalmente para estudos pessoais, mas sugestões e melhorias são sempre bem-vindas através de Issues ou Pull Requests.
-
-## 👨‍💻 Autor
-
-**Vitor Matheus Garcia Furini**
-
-Java Developer
-
-- GitHub: https://github.com/vfurinii
-- LinkedIn: https://www.linkedin.com/in/vitor-furini/
-
----
-
-⭐ Caso este repositório seja útil para seus estudos, considere deixar uma estrela.
+- The two projects share the same Kafka broker on port `9092`.
+- Start from the workspace root if you want a single place to compare them side by side.
+- If you are presenting live, keep the terminal with the benchmark script visible so the startup times are easy to compare.
