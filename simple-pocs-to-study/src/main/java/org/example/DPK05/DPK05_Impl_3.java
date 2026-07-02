@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.Comparator;
+package org.example.DPK05;
 
 public class DPK05_Impl_3 {
 
