@@ -1,7 +1,10 @@
 package org.example.DPK05;
 
+import lombok.Getter;
+
 public class DPK05_Impl_3 {
 
+    @Getter
     enum Beatle {
         JOHN("John", 100),
         PAUL("Paul", 90),
@@ -14,14 +17,6 @@ public class DPK05_Impl_3 {
         Beatle(String displayName, int power) {
             this.displayName = displayName;
             this.power = power;
-        }
-
-        public String getDisplayName() {
-            return displayName;
-        }
-
-        public int getPower() {
-            return power;
         }
 
         public static Beatle fromName(String name) {
