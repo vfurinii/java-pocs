@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$USER_HOME$/src/main/java" charset="UTF-8" />
+    <file url="file://$USER_HOME$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apache-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/apache-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/avaje-inject-poc/src/main/java" charset="UTF-8" />
@@ -28,9 +30,8 @@
     <file url="file://$PROJECT_DIR$/team-red-pocs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/untitled1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/untitled1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/virtual-threads/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../powermockito/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../powermockito/src/main/resources" charset="UTF-8" />
-    <file url="file://$USER_HOME$/src/main/java" charset="UTF-8" />
-    <file url="file://$USER_HOME$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
