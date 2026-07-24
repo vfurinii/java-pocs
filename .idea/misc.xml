@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/team-red-pocs/pom.xml" />
         <option value="$PROJECT_DIR$/avaje-inject-poc/pom.xml" />
         <option value="$PROJECT_DIR$/virtual-threads/pom.xml" />
+        <option value="$PROJECT_DIR$/leetcode-problems/pom.xml" />
       </list>
     </option>
   </component>
