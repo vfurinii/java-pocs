@@ -20,6 +20,7 @@
         <module name="chess-system" />
         <module name="avaje-inject-poc" />
         <module name="powermockito" />
+        <module name="leetcode-problems" />
         <module name="grocery-list-system" />
         <module name="spring-cloud-config-poc" />
         <module name="dungeon-game-java" />

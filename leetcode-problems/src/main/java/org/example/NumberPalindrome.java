@@ -1,4 +1,4 @@
-package org.example.leetcode.exercises;
+package org.example;
 
 public class NumberPalindrome {
 
